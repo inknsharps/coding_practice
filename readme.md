@@ -1,1 +1,0 @@
-This is some HTML and CSS practice on that I was working on during 01/27/21.
