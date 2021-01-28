@@ -14,12 +14,16 @@
   border-style: solid;
   border-width: 100;
   border-color: gray;
+  padding-right: 70%;
+  width:max-content;
+  height:max-content;
 }
 
 .bodytext {
   font-family: Helvetica;
   font-size: 16px;
   color: white;
+  text-indent: 50px;
   width: max-content;
   height: max-content;
 }
@@ -31,7 +35,7 @@
   height: max-content;
 }
 
-.headertext {
+.headertext1 {
   font-family: Helvetica;
   font-size: 60px;
   text-transform: uppercase;
@@ -39,6 +43,47 @@
   background-color: black;
   width: max-content;
   height: max-content;
+}
+
+.headertext2 {
+  font-family: Helvetica;
+  font-size: 20px;
+  text-transform: uppercase;
+  text-decoration: underline;
+  text-indent: 50px;
+  color:white;
+  background-color: black;
+  width: max-content;
+  height: max-content;
+}
+
+/* TABLE STYLING*/
+
+.table {
+  border-width: 1px;
+  border-style:dotted;
+  border-color:lightgray;
+}
+
+.tablecategory {
+  border-width: 1px;
+  border-style: groove;
+  border-color:lightgray;
+  color: white;
+  font-family: Helvetica;
+  font-size: 16px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.tableentry {
+  border-width: 1px;
+  border-style: groove;
+  border-color:lightgray;
+  color: white;
+  font-family: Helvetica;
+  font-size: 12x;
+  text-align: center;
 }
 
 /* LINK STYLING */
