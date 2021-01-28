@@ -1,7 +1,4 @@
-.box {
-    position: absolute;
-  }
-
+/* BODY STYLING */
 .backgroundimage {
   background-color: black;
   background-image: url('https://images.unsplash.com/photo-1610200676416-8a9b1c15ade4?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1370&q=80');
@@ -12,25 +9,34 @@
   height:720px;
 }
 
-.bodytext {
-  font-family: Helvetica;
-  color: black;
-  background-color: darkgray;
-  border-color: black;
-  border-width: 20px;
-
+.bodybackground {
+  background-color: black;
+  border-style: solid;
+  border-width: 100;
+  border-color: gray;
 }
 
+.bodytext {
+  font-family: Helvetica;
+  font-size: 16px;
+  color: white;
+  width: max-content;
+  height: max-content;
+}
+
+/* HEADER STYLING */
 .header {
- background-color: darkgray;
- width:max-content;
- height:max-content;
+  box-shadow: 10px 10px 0px gray;
+  width: max-content;
+  height: max-content;
 }
 
 .headertext {
   font-family: Helvetica;
+  font-size: 60px;
+  text-transform: uppercase;
   color:white;
   background-color: black;
-  width:max-content;
-  height:max-content;
+  width: max-content;
+  height: max-content;
 }
