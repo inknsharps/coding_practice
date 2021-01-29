@@ -14,6 +14,7 @@
   border-style: solid;
   border-width: 100;
   border-color: gray;
+  float: left;
   padding-right: 70%;
   width:max-content;
   height:max-content;
