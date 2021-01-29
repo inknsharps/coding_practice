@@ -2,6 +2,7 @@
 <html lang="en-us">
     <head>
         <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="style.css">
         <title>Activity 1: Basic HTML Bio</title>
     </head>
     <body>
@@ -9,20 +10,23 @@
             <h1>Student Bio</h1>
         </header>
         
-        <div>
-            <h2>Neil Chen</h2>
-            <a href="https://www.google.com" target="_blank">
-                <img src="download.png" alt="biopicture">
-            </a>
+        <div class="container">
+            <section id="main-bio">
+                <h2>Neil Chen</h2>
+                <a href="https://www.google.com" target="_blank">
+                    <img id="bio-image" src="downloand.png" alt="biopicture">
+                </a>
+            <p>This is my paragraph about <a href="https://www.lipsum.com" target="_blank">myself.</a></p>
+            </section>
+
+            <section id="contact-info"> 
+            <h2>Contact Info</h2>
+                <ul>
+                    <li><strong>Email:</strong> <a href="mailto:abc@example.com">someplace@gmail.com</a></li>
+                    <li><strong>Github:</strong> <a href="https://www.github.com">sampleName</a></li>
+                    <li><strong>Portfolio:</strong> <a href="#"> TBA</a></li>
+                </ul>
+            </section>
         </div>
-
-        <p>This is my paragraph about <a href="https://www.lipsum.com" target="_blank">myself.</a></p>
-
-        <h2>Contact Info</h2>
-        <ul>
-            <li><strong>Email:</strong> <a href="mailto:abc@example.com">someplace@gmail.com</a></li>
-            <li><strong>Github:</strong> <a href="https://www.github.com">sampleName</a></li>
-            <li><strong>Portfolio:</strong> <a href="#"> TBA</a></li>
-        </ul>
     </body>
 </html>
