@@ -8,6 +8,7 @@ body {
 
 header {
     background-color:#333333;
+    padding:10px;
 }
 
 h1 {
@@ -22,10 +23,6 @@ h2 {
     font: size 24px;
 }
 
-p {
-    text-align: center;
-}
-
 .container {
     width:1024px;
     margin:0 auto;
@@ -37,15 +34,17 @@ p {
     float:left;
 }
 
-#main-bio {
-    width:70%;
-    margin: 10px;
+#bio-image {
+    margin-right:30px;
 }
 
-#content-info {
+#main-bio {
+    width:70%;
+}
+
+#contact-info {
     width:30%;
     line-height:150%;
-    
 }
 
 a {
