@@ -1,0 +1,72 @@
+body {
+    background-color:rgba(216, 216, 216, 0.349);
+}
+
+main {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+header {
+    text-align:center;
+    padding:2%;
+    margin:0;
+    color:white;
+    background-color:darkgreen;
+}
+
+section {
+    color:#FFFFFF;
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+}
+
+.link {
+    width:25%;
+    margin:20px;
+    padding:20px;
+    border:5px solid rgb(131, 131, 131);
+    border-radius: 20px;
+    background-color:rgb(33, 38, 110);
+    color:#FFFFFF;
+}
+
+.hover_box {
+    width:25%;
+    margin:20px;
+    padding:20px;
+    border:5px solid rgb(131, 131, 131);
+    border-radius: 20px;
+    background-color:#8f0404;
+}
+
+.click_box {
+    width:25%;
+    margin:20px;
+    padding:20px;
+    border:5px solid rgb(131, 131, 131);
+    border-radius: 20px;
+    background-color:#4d0750;
+}
+
+.hover_box p,
+.click_box p,
+.focus_link_box p {
+    text-align:center;
+}
+
+/* Hover pseudo-class styles */
+
+.hover_box:hover {
+    transform:rotate(10deg);
+}
+
+.link:focus{
+    transform:rotate(10deg);
+}
+
+/* Click pseudo-class styles */
+
+.click_box:active {
+    transform:rotate(-10deg)
+}
