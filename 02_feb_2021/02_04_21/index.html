@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Practice Examples!</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Combinator Practice</h1>
+    </header>
+    <main>
+        <p>This &lt;p&gt; tag is styled differently through using a Descendant combinator "main p {}" in the CSS rules.</p>
+        <br>
+        <section>
+            As you can see in this text, the &lt;main&gt; tag is styled in the CSS like so, but the &lt;section&gt; tag which this text lives in has not been defined in the CSS, so it inherits the &lt;main&gt; tag styling.
+            <p>However, because "main p{}" in the CSS is used, this affects all descendants, which makes this &lt;p&gt; tag be affected as well, because it is a descendant of the &lt;main&gt; tag, despite having &lt;section&gt; as parent.</p>
+        </section>
+        <br>
+    </main>
+    <article>
+        So, here's an example of a Child combinator, which functions similarly to Descendant combinators but only affects the direct children of an element. This section is using the &lt;article&gt; tag as a parent.
+        <p>
+            This &lt;p&gt; tag is styled differently through using a Child combinator "article > p" in the CSS.
+        </p>
+        <section>
+            <p>In the HTML, this is a wrapped with a &lt;p&gt; tag, but this does NOT get styled because the parent of this &lt;p&gt; tag is &lt;section&gt;, and the CSS rule we defined only affects &lt;p&gt; tags with &lt;article&gt; as a direct parent.</p>
+        </section>
+    </article>
+    <aside>
+        <h3>We also have Sibling combinators, which comes in effect when specific children are present.</h3>
+        <br>
+        <section>
+            <div>General sibling combinator rules come in effect when the two siblings are present.</div>
+            <p>In this case, we have "div ~ p {}" this rule applies when &lt;p&gt; is a sibling to &lt;div&gt;.</p>
+            <br>
+            <div>Note that the &lt;div&gt; tags are NOT affected by the rule.</div>
+            <br>
+            <p>But this other &lt;p&gt; is.</p>
+        </section>
+    </aside>
+    <footer>
+         <h3>Another sibling combinator is the Adjacent sibling combinator, which only affects adjacent siblings.</h3>
+        <br>
+        <section>
+            <div>If you've noticed, the HTML code structure for this section is the same as above.</div>
+            <p>However in this case, we have "div + p {}" this rule applies when &lt;p&gt; is adjacent to &lt;div&gt;.</p>
+            <br>
+            <div>Again, the &lt;div&gt; tags are NOT affected by the rule.</div>
+            <br>
+            <p>But this other &lt;p&gt; is not affected, due to the &lt;br&gt; tag right above it in the code.</p>
+        </section>
+    </footer>
+</body>
+</html>
