@@ -61,7 +61,7 @@ function gameLoop(){
                 alert("Try typing exactly Rock, Paper or Scissors in the prompt!");
             }
         }
-        // Initialize RPS Locic Function
+        // Initialize RPS Logic Function
         compare(userChoice,computerChoice);
 
         // Game end functionality
