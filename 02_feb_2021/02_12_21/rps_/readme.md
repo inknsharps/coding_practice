@@ -30,7 +30,7 @@ This is an attempt I made on the Rock, Paper, Scissors project before the class.
 ### Random Number Generation
 
 * `Math.random()` returns a random value between 0 (inclusive),  and 1 (exclusive), meaning that it will always return a value under 1.
-    * `Math.floor()` *rounds down* to a number to its nearest integer.
-    * Therefore, if we multiply the result of `Math.random()` by a number, we can then use `Math.floor()` to round it up, which means we can get a random number generator with a certain range of numbers.
+    * `Math.floor()` *rounds down* a number to its nearest integer.
+    * Therefore, if we multiply the result of `Math.random()` by a number, we can then use `Math.floor()` to round it down, which means we can get a random number generator with a certain range of numbers.
         * Eg. `Math.floor(Math.random() * 5)` will return a number between 0 and 4 (remember that `Math.random()` will never return 1, so 5 is impossible).
 
