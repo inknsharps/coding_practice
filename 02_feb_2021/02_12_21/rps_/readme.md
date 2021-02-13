@@ -14,6 +14,15 @@ This is an attempt I made on the Rock, Paper, Scissors project before the class.
 
 * You have to declare any values you want to change in the code later as a variable.
 * Scope is super important when you're trying to declare variables and functions, you cannot access something that is out of scope!
+* `while(condition)` is another way you can iterate, until the condition is met. This following example repeats the console log message until it hits 5 times:
+    ```     
+            let x = 0;
+            while(x < 5){
+                x++;
+                console.log("This message has repeated " + x + " times.");
+            } 
+    ```
+    The nice thing about `while` is that you can define the condition however you please, but of course you need to build in a condition where it becomes false, otherwise you may get an infinite loop!
 * Don't forget to `break;` out of loops otherwise you might repeat things more than you want to.
 * Remember to account for all cases that you might be setting up with your code, try breaking your code with unexpected inputs and see what happens.
 

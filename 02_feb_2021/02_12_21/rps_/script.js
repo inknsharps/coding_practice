@@ -31,30 +31,30 @@ function gameLoop(){
         // RPS Logic Function
         var compare = function(choice1, choice2){
             if(choice1 === choice2){
-                alert("It's a tie! No points are awarded." + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                alert("It's a tie! No points are awarded.\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
             } else if(choice1 === "Rock"){
                 if(choice2 ==="Scissors"){
                     userScore++;
-                    alert("Rock beats Scissors, you win this round!" + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                    alert("Rock beats Scissors, you win this round!\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
                 } else if(choice2 === "Paper"){
                     computerScore++;
-                    alert("Rock loses to Paper, you lose this round!" + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                    alert("Rock loses to Paper, you lose this round!\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
                 }
             } else if(choice1 === "Paper"){
                 if(choice2 === "Rock"){
                     userScore++;
-                    alert("Paper beats Rock, you win this round!" + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                    alert("Paper beats Rock, you win this round!\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
                 } else if(choice2 === "Scissors"){
                     computerScore++;
-                    alert("Paper loses to Scissors, you lose this round!"  + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                    alert("Paper loses to Scissors, you lose this round!\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
                 }   
             } else if(choice1 === "Scissors"){
                 if (choice2 === "Paper"){
                     userScore++;
-                    alert("Scissors beats Paper, you win this round!" + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                    alert("Scissors beats Paper, you win this round!\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
                 } else if(choice2 === "Rock"){
                     computerScore++;
-                    alert("Scissors loses to Rock, you lose this round!" + "\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
+                    alert("Scissors loses to Rock, you lose this round!\n" + "(You) " + userScore + " : " + computerScore + " (CPU)");
                 }
             // Failsafe in case the user doesn't input Rock, Paper or Scissors.
             } else {
