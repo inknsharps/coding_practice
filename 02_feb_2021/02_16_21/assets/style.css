@@ -25,5 +25,5 @@ textarea {
 } 
 
 aside {
-    flex-direction: row;
+    display: block;
 }
