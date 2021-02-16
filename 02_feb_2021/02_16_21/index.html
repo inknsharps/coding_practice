@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Password Generator</title>
+    <link rel="stylesheet" type="text/css" href="./assets/reset.css">
+    <link rel="stylesheet" type="text/css" href="./assets/style.css">
+</head>
+    <body>
+        <header>
+            <h1>Random Password Generator Take 2</h1>
+        </header>
+        <article>
+            <section>
+                <textarea readonly id="password" placeholder="Generated Password"></textarea>
+            </section>
+            <aside>
+                <label for="length">Password Length </label><input type="number" id="length" defaultValue="8" min="8" max="128">
+                <br>
+                <input type="checkbox" id="lowercase"><label for="lowercase">Add Lowercase Letters</label>
+                <br>
+                <input type="checkbox" id="uppercase"><label for="uppercase">Add Uppercase Letters</label>
+                <br>
+                <input type="checkbox" id="number"><label for="number">Add Numbers</label>
+                <br>
+                <input type="checkbox" id="symbol"><label for="symbol">Add Special Symbols</label>
+                <br>
+                <button id="generate" type="button">Generate Password!</button>
+            </aside>
+        </article>
+        <footer>
+            <h3>Made with CSS and Javascript.</h3>
+        </footer>
+    </body>
+    <script src="./assets/script.js"></script>
+</html>
