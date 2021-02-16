@@ -63,7 +63,7 @@ function randomizeArray(){
     }
     function getRandomSpecial(){
         var symbol = "!@#$%^&*(){}[]=<>/,.|~?";
-        return symbol[Math.floor(Math.random()*symbol.length)];
+        return symbol.charAt(Math.floor(Math.random()*symbol.length));
     }
 }
 
@@ -75,6 +75,6 @@ function genPassword(){
         randomizeArray();
         finalPasswordArray.push(passwordGenArray[Math.floor(Math.random()*passwordGenArray.length)]);
     }
-    var finalPassword = finalPasswordArray.join("");
+    finalPassword = finalPasswordArray.join("");
     return finalPassword;
 }

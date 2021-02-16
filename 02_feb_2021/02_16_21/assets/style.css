@@ -13,8 +13,7 @@ article {
 
 section {
     border: 1px dotted grey;
-    margin: 5vh 20vh;
-    padding: 20vh;
+    margin: 8vh 0;
 }
 
 textarea {
@@ -22,6 +21,7 @@ textarea {
     outline: none;
     resize: none;
     text-align: center;
+    width: 100vh;
 } 
 
 aside {
