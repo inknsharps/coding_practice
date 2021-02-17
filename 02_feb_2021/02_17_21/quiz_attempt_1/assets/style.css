@@ -1,0 +1,23 @@
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+main h1 {
+    font-size: 36px;
+    color: rgb(255, 255, 255);
+    padding: 0 10vh;
+    border-radius: 13px;
+    background-color: rgb(85, 62, 33);
+}
+
+main section {
+    padding: 20vh 10vh;
+    border: 1px dotted rgb(122, 122, 122);
+}
+
+#start {
+    margin: 5vh;
+}
