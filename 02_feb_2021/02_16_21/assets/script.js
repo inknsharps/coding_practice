@@ -10,13 +10,13 @@ function writePassword(){
     passwordText.value = password;
 }
 
-// Checkbox functionality
+// Checkbox and length box functionality
 // Define check variables in global scope
 var lowercaseCheck;
 var uppercaseCheck;
 var numberCheck;
 var symbolCheck;
-// Length of password value
+// Define Length of password value in global scope
 var passwordLength;
 
 // Function to check if checkbox is checked off (checked = true)
@@ -36,7 +36,7 @@ var finalPassword;
 
 // Randomize password selection array
 function randomizeArray(){
-    // Array for generated characters
+    // Clears array for generated characters
     passwordGenArray = [];
     // Adds to passwordGenArray based on checkboxes
     if (lowercaseCheck === true){
@@ -71,6 +71,7 @@ function randomizeArray(){
 function genPassword(){
     parameterChecks();
     finalPasswordArray = [];
+    // For loop that repeats based on passwordLength value
     for (var i = 0; i < passwordLength; i++){
         randomizeArray();
         finalPasswordArray.push(passwordGenArray[Math.floor(Math.random()*passwordGenArray.length)]);
