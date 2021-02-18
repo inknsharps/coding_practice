@@ -21,7 +21,7 @@ main section {
     border: 1px dotted rgb(122, 122, 122);
 }
 
-.quizQuestion {
+.quiz-question {
     font-size: 20px;
     color: rgb(255, 255, 255);
     padding: 5vh 10vh;
@@ -29,18 +29,12 @@ main section {
     background-color: rgb(85, 62, 33);
 }
 
-.quizChoice1,
-.quizChoice2,
-.quizChoice3,
-.quizChoice4 {
+.quiz-choice {
     padding: 2vh 4vh;
     border: 1px solid rgb(122, 122, 122);
 }
 
-.quizChoice1:hover,
-.quizChoice2:hover,
-.quizChoice3:hover,
-.quizChoice4:hover {
+.quiz-choice:hover {
     transition: box-shadow, 0.5s;
     box-shadow: inset 1px 1px 3px rgb(133, 0, 0), 1px 1px 3px rgb(133, 0, 0);
 }
