@@ -13,6 +13,6 @@ This is an early attempt at the word guessing game that was an activity for the 
 
 ## To-do
 
-* Win and lose conditions and notifications
+* ~~Win and lose conditions and notifications~~
 * Limit inputs to only letters
 * Persistent win loss records

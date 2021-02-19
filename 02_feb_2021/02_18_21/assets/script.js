@@ -1,3 +1,8 @@
+// Declare initial score and time variables
+var wins = 0;
+var losses = 0;
+var timeRemaining;
+
 // Word guessing generation
 // Declare wordlist (array), selected word (array), blank version of selected word (string), the letters of the selected word (array)
 var wordList = ["banana", "apple", "pear"];
@@ -6,6 +11,10 @@ var wordSelectedAnswer;
 var wordToMatch;
 
 // Query Selectors
+// Selects the wins span element
+var winsEl = document.querySelector(".wins");
+// Selects the losses span element
+var lossesEl = document.querySelector(".losses");
 // Selects the word field element for displaying answer
 var wordFieldEl = document.querySelector(".word-field");
 // Selects the guessed letters element for displaying guessed letters
@@ -23,8 +32,9 @@ var guessedLetters = [];
 document.onkeypress = function(event) {
     letter = event.key.toUpperCase();
     guessedLetters.push(letter);
-    guessedLettersEl.textContent = guessedLetters;
+    guessedLettersEl.textContent = guessedLetters.join("").split(" "); // This removes the commas in guessedLettersEl because guessedLetters is currently an array
     checkLetters(letter);
+    checkAnswer();
 }
 
 // Function to check guessed typed in letters, and add them to the word field if they match
@@ -36,6 +46,18 @@ function checkLetters(a){
         }
         // When the letters are guessed and match, add them to the wordSelectedAnswer array
         wordFieldEl.textContent = wordSelectedAnswer.join("");
+    }
+}
+
+// Function for checking the inputted answer
+function checkAnswer(){
+    // If the timer is still running
+    if (timeRemaining !== 0){
+        // AND if the joined string value of wordSelectedAnswer = wordSelected, increment wins, set time to 0
+        if (wordSelectedAnswer.join("") === wordSelected){
+            wins++;
+            timeRemaining = 0;
+        }
     }
 }
 
@@ -56,11 +78,11 @@ function buildWordGuess(){
 
 // Game Initialization functions
 function gameInit(){
-    // Reset the guessed letters array
+    // Reset the guessedletters array
     guessedLetters = [];
     guessedLettersEl.textContent = guessedLetters;
     // Timer functionality
-    var timeRemaining = 10;
+    timeRemaining = 10;
     var timeInterval = setInterval(() => {
         if (timeRemaining !== 0){
         gameTimerEl.textContent = timeRemaining;
@@ -68,6 +90,13 @@ function gameInit(){
         } else {
         clearInterval(timeInterval);
         gameTimerEl.textContent = "Time's up!";
+        // In the case where the timer is 0 AND the user did not guess the word
+        if (wordSelectedAnswer.join("") !== wordSelected){
+            losses++;
+        }
+        // Set up wins and losses
+        winsEl.textContent = wins;
+        lossesEl.textContent = losses;
         }
     }, 1000);   
 }
