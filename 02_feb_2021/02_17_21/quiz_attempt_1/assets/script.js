@@ -24,6 +24,13 @@ const breadQuestions = [
     }
 ]
 
+// Declare variable for question number
+var quizProgress = 0
+
+// Start quiz button
+var startButton = document.querySelector("#start");
+startButton.addEventListener("click", loadQuestion);
+
 // Function to increment score
 function correctAnswer(){
     quizScore++;
@@ -39,23 +46,28 @@ function compareAnswer(q, a){
     }
 }
 
-// Function to shuffle answers, ASSUMING that we set up the questions object literal like the example we've done above.
-// Parameters: ans refers to the object where the question+answers are stored, num refers to the index of which question+answers set we pull from.
-// ans[num].answers gives us ONLY the answers from the question+answers set, which then get shuffled using .sort() and a Math.random() function.
-// Important note, this isn't a super great method for shuffling since it does have some biases, but works for our usage.
-function shuffleAnswers(ans, num){
-    var shuffleArray = ans[num].answers
-    return shuffleArray.sort(() => Math.random() - 0.5);
-}
+// Function to put the question into the webpage
+function loadQuestion(){
+    // Function to shuffle answers, ASSUMING that we set up the questions object literal like the example we've done above.
+    // Parameters: ans refers to the object where the question+answers are stored, num refers to the index of which question+answers set we pull from.
+    // ans[num].answers gives us ONLY the answers from the question+answers set, which then get shuffled using .sort() and a Math.random() function.
+    // Important note, this isn't a super great method for shuffling since it does have some biases, but works for our usage.
+    function shuffleAnswers(ans, num){
+        var shuffleArray = ans[num].answers
+        return shuffleArray.sort(() => Math.random() - 0.5);
+    }
 
-// Function to build the question
-function buildQuestion(questNum){
-    var question = breadQuestions[questNum].question;
-    var answers = shuffleAnswers(breadQuestions, questNum);
-    console.log(answers);
-    document.querySelector(".quiz-question").textContent = question;
-    // For loop to replace all the .quiz-choice classes
-    for (var i = 0; i < 4; i++){
-        document.querySelectorAll(".quiz-choice")[i].textContent = answers[i]
-    }   
+    // Function to build the question
+    function buildQuestion(questNum){
+        var question = breadQuestions[questNum].question;
+        var answers = shuffleAnswers(breadQuestions, questNum);
+        document.querySelector(".quiz-question").textContent = question;
+        // For loop to replace all the .quiz-choice classes
+        for (var i = 0; i < 4; i++){
+            document.querySelectorAll(".quiz-choice")[i].textContent = answers[i];
+        }   
+    }
+    // Call buildQuestion(), which uses quizProgress to pull the question number, then increment question number
+    buildQuestion(quizProgress);
+    quizProgress++;
 }

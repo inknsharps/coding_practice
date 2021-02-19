@@ -5,8 +5,15 @@ var wordSelected;
 var wordSelectedAnswer;
 var wordToMatch;
 
+// Query Selectors
 // Selects the word field element for displaying answer
 var wordFieldEl = document.querySelector(".word-field");
+// Selects the guessed letters element for displaying guessed letters
+var guessedLettersEl = document.querySelector(".guessed-letters");
+// Selects the timer element for displaying timer
+var gameTimerEl = document.querySelector(".timer");
+// Selects the start button element
+var startButton = document.querySelector("#game-start");
 
 // Guessing logic
 // Declare letter to be guessed, and guessed letters array
@@ -14,7 +21,6 @@ var letter;
 var guessedLetters = [];
 // When a key is pressed, convert key to uppercase, add the key pressed to the guessedLetters array, add key to elements on the page, run checkLetters function
 document.onkeypress = function(event) {
-    var guessedLettersEl = document.querySelector(".guessed-letters");
     letter = event.key.toUpperCase();
     guessedLetters.push(letter);
     guessedLettersEl.textContent = guessedLetters;
@@ -48,9 +54,12 @@ function buildWordGuess(){
     wordFieldEl.textContent = wordSelectedAnswer.join("");
 }
 
-// Function to run a timer
-var gameTimerEl = document.querySelector(".timer");
-function gameTimer(){
+// Game Initialization functions
+function gameInit(){
+    // Reset the guessed letters array
+    guessedLetters = [];
+    guessedLettersEl.textContent = guessedLetters;
+    // Timer functionality
     var timeRemaining = 10;
     var timeInterval = setInterval(() => {
         if (timeRemaining !== 0){
@@ -63,9 +72,7 @@ function gameTimer(){
     }, 1000);   
 }
 
-
-// Start the game with a button functionality
-// Event listener for button, which runs gameTimer function
-var startButton = document.querySelector("#game-start");
-startButton.addEventListener("click", gameTimer);
+// Event listener for button, which runs gameInit function
+// Start the game, and buildWordGuess with a button functionality
+startButton.addEventListener("click", gameInit);
 startButton.addEventListener("click", buildWordGuess);
