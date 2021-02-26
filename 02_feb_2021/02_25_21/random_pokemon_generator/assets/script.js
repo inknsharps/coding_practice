@@ -32,21 +32,24 @@ async function generatePokemon(){
 
 // Generate HTML elements
 function generateHTML(){
+    let pokemonCard = document.createElement("div");
+    pokemonCard.setAttribute("class", "card");
+    pokemonFieldEl.appendChild(pokemonCard);
     // Generate img tag
     let pokemonSpriteEl = document.createElement("img");
     pokemonSpriteEl.setAttribute("class", "card-img-top");
     pokemonSpriteEl.setAttribute("src", pokemonSprite);
-    pokemonFieldEl.appendChild(pokemonSpriteEl);
+    pokemonCard.appendChild(pokemonSpriteEl);
     // Generate h2 tag for Pokemon name
     let pokemonNameEl = document.createElement("h2");
     pokemonNameEl.setAttribute("class", "col-12 card-title text-light text-center text-capitalize bg-dark");
     let pokemonNameElText = document.createTextNode(pokemonName);
     pokemonNameEl.appendChild(pokemonNameElText);
-    pokemonFieldEl.appendChild(pokemonNameEl);
+    pokemonCard.appendChild(pokemonNameEl);
     // Generate flexbox row for Pokemon typing
     let pokemonTypings = document.createElement("div");
     pokemonTypings.setAttribute("class", "d-flex m-2");
-    pokemonFieldEl.appendChild(pokemonTypings);
+    pokemonCard.appendChild(pokemonTypings);
     // Generate h4 tags for Pokemon typing
     pokemonTypesArray.forEach((index) => {
         let pokemonTypesEl = document.createElement("h4");
