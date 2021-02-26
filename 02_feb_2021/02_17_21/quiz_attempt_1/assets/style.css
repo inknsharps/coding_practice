@@ -35,8 +35,12 @@ main section {
 }
 
 .quiz-choice:hover {
-    transition: box-shadow, 0.5s;
     box-shadow: inset 1px 1px 3px rgb(133, 0, 0), 1px 1px 3px rgb(133, 0, 0);
+}
+
+@keyframes breathingGlow {
+    from {box-shadow: none;}
+    to {box-shadow: inset 1px 1px 3px rgb(133, 0, 0), 1px 1px 3px rgb(133, 0, 0)};
 }
 
 #start {

@@ -8,7 +8,11 @@ var quizChoice = document.querySelectorAll(".quiz-choice");
 // Start quiz button functionality
 var startButton = document.querySelector("#start");
 startButton.addEventListener("click", loadQuestion);
-
+// Add event listener for when you click a quizChoice element, select it as your answer 
+quizChoice[0].addEventListener("click", answerSelect);
+quizChoice[1].addEventListener("click", answerSelect);
+quizChoice[2].addEventListener("click", answerSelect);
+quizChoice[3].addEventListener("click", answerSelect);
 
 // Declare questions and answers as an array with object literals, with values for questions and answers
 const breadQuestions = [
@@ -39,6 +43,11 @@ var quizProgress = 0;
 // Function to increment score
 function incrementScore(){
     quizScore++;
+}
+
+function answerSelect(event){
+    event.stopPropagation();
+    answerValidation(answerChoice1);
 }
 
 // Function to compare question to answer
@@ -82,7 +91,7 @@ function loadQuestion(){
         // innerHTML is used here instead of textContent because we want to set the data-state for answer comparison.
         for (var i = 0; i < 4; i++){
             quizChoice[i].innerHTML = answers[i];
-        } 
+        }
     }
     // Call buildQuestion(), which uses quizProgress to pull the question number, then increment question number
     buildQuestion(quizProgress);
