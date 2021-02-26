@@ -24,7 +24,7 @@ async function generatePokemon(){
             // forEach function to pull all the types of the Pokemon
             pokemonTypes.forEach((index) => {
                 pokemonTypesArray.push(index.type.name);
-                console.log(pokemonTypesArray)
+                console.log(pokemonTypesArray);
             });
             console.log(pokemonName);
         });
