@@ -1,0 +1,19 @@
+{
+  "name": "04_12_21",
+  "version": "1.0.0",
+  "description": "This is an email template generator to help me deal with daily emails and the such.",
+  "main": "index.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "inquirer": "^8.0.0",
+    "open": "^8.0.5"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
